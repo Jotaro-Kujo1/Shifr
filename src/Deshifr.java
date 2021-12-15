@@ -22,20 +22,23 @@ public class Deshifr extends Glob{
         else return false;
     }
     private void treatment(Shifr sh){
-        char [] arr2 = str.toCharArray();
+        char [] arr2 = this.str.toCharArray();
         int a = changeNumbers.get(0);
         int b = changeNumbers.get(1);
-        for(int i=arr2.length-1;i>=0;i--){
-            if(i == b && a >= 0){
-                char tmp1 = arr2[b];
-                char tmp2 = arr2[a];
-                arr2[b] = tmp2;
-                arr2[a] = tmp1;
+        for(int i = arr2.length-1;i>=0;i--){
+            if(i == b && a > 0){
+                char tmp1 = arr2[a];//6
+                char tmp2 = arr2[b];//8
+                arr2[a] = tmp2;
+                arr2[b] = tmp1;
                 a--;
                 b--;
             }
         }
-        String resStr = new String(arr2);
-        System.out.println(" haha ez " + resStr);
+        for(int i=0;i<arr2.length;i++){
+            System.out.print(arr2[i]);
+        }
+        //String resStr = new String(arr2);
+        //System.out.println(" haha ez " + resStr);
     }
 }

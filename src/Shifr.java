@@ -34,6 +34,8 @@ public class Shifr extends Glob{
                 b++;
             }
         }
+        a--;
+        b--;
 
         changeNumbers.clear();
         changeNumbers.add(a);
