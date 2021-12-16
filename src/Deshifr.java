@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class Deshifr extends Glob{
-    //private String str;
-    //private String strAfter;
 
     public Deshifr(Shifr sh){
         boolean f = checkUser(sh);
@@ -11,6 +9,8 @@ public class Deshifr extends Glob{
             changeNumbers = sh.changeNumbers;
             password = sh.password;
             treatment(sh);
+        }else{
+            System.out.println(" Пароль неверный ");
         }
     }
     private boolean checkUser(Shifr sh){
@@ -35,10 +35,7 @@ public class Deshifr extends Glob{
                 b--;
             }
         }
-        for(int i=0;i<arr2.length;i++){
-            System.out.print(arr2[i]);
-        }
-        //String resStr = new String(arr2);
-        //System.out.println(" haha ez " + resStr);
+        String resStr = new String(arr2);
+        System.out.println(" haha ez " + resStr);
     }
 }

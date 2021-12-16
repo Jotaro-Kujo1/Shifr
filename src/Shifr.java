@@ -3,11 +3,8 @@ import java.util.Scanner;
 import java.util.List;
 
 public class Shifr extends Glob{
-    //private String str;
-    //private String strAfter;
     private String abes;
-    //private List<Integer> changeNumbers = new ArrayList<Integer>();
-    //private String password;
+
 
     public Shifr(){
         treatment();
@@ -51,10 +48,8 @@ public class Shifr extends Glob{
         Scanner in = new Scanner(System.in);
         System.out.println(" Введите ваше сообщение ");
         str = in.nextLine();
-        //setStr(in.nextLine());
         System.out.println(" Введите какие символы менять(К примеру: 1,3, значит будет пропускаться 1 и 3, 2 и 4, 3 и 5 и.т.д.:");
         abes = in.nextLine();
-        //setAbes(in.nextLine());
         System.out.println(" Установите пароль: ");
         password = in.nextLine();
     }
@@ -63,14 +58,7 @@ public class Shifr extends Glob{
             changeNumbers.add(Integer.parseInt(str));
         }
     }
-    /*
-    private void setStr(String str){
-        this.str = str;
-    }
-    private void setAbes(String str){
-        abes = str;
-    }
-     */
+
     protected String getStrAfterTreatment(){
         return strAfter;
     }
