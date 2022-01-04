@@ -6,5 +6,4 @@ public abstract class Glob {
     protected String strAfter;
     protected List<Integer> changeNumbers = new ArrayList<Integer>();
     protected String password;
-
 }

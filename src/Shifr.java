@@ -1,10 +1,11 @@
+import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.List;
+import java.io.*;
 
 public class Shifr extends Glob{
     private String abes;
-
 
     public Shifr(){
         treatment();
@@ -45,14 +46,18 @@ public class Shifr extends Glob{
         strAfter = new String(arr);
     }
     private void create(){
-        Scanner in = new Scanner(System.in);
-        System.out.println(" Введите ваше сообщение ");
-        str = in.nextLine();
-        System.out.println(" Введите какие символы менять(К примеру: 1,3, значит будет пропускаться 1 и 3, 2 и 4, 3 и 5 и.т.д.:");
-        abes = in.nextLine();
-        System.out.println(" Установите пароль: ");
-        password = in.nextLine();
+        try{
+            FileReader fread = new FileReader("C://Javist/Shifr/filetest.txt");
+            BufferedReader reader = new BufferedReader(fread);
+            str = reader.readLine();
+            abes = reader.readLine();
+            password = reader.readLine();
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
+
     private void splinter(String a){
         for(String str: a.split(",")){
             changeNumbers.add(Integer.parseInt(str));

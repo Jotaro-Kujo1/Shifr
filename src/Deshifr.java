@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 public class Deshifr extends Glob{
 
     public Deshifr(Shifr sh){
